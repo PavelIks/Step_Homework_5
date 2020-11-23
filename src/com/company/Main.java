@@ -54,7 +54,7 @@ public class Main
         Если пользователь ввел не шестизначное число требуется вывести
         сообщение об ошибке.*/
 
-        Scanner in1 = new Scanner(System.in);
+        /*Scanner in1 = new Scanner(System.in);
         System.out.print("Введите 6-значное число: ");
         String numb1 = in1.next();
         if((int)numb1.length() != 6)
@@ -75,6 +75,42 @@ public class Main
             System.out.print(A3);
             System.out.print(A2);
             System.out.print(A1);
+        }*/
+
+
+        /*Пользователь вводит с клавиатуры номер месяца (от 1 до 12). В
+        зависимости от полученного номера месяца программа выводит на
+        экран надпись: Winter (если введено значение 1,2 или 12), Spring
+        (если введено значение от 3 до 5), Summer (если введено значение
+        от 6 до 8), Autumn (если введено значение от 9 до 11). Если
+        пользователь ввел значение не в диапазоне от 1 до 12 требуется
+        вывести сообщение об ошибке.*/
+
+        /*Scanner in1 = new Scanner(System.in);
+        System.out.print("Введите номер месяца: ");
+        int a = in1.nextInt();
+        if(a == 1 || a == 2 || a == 12)
+        {
+            System.out.print("Winter");
         }
+        else if(a == 3 || a == 4 || a == 5)
+        {
+            System.out.print("Spring");
+        }
+        else if(a == 6 || a == 7 || a == 8)
+        {
+            System.out.print("Summer");
+        }
+        else if(a == 9 || a == 10 || a == 11)
+        {
+            System.out.print("Autumn");
+        }
+        else
+        {
+            System.out.print("Число не может быть больше 12-и!");
+        }*/
+
+
+
     }
 }
