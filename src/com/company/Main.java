@@ -78,7 +78,7 @@ public class Main
         }*/
 
 
-        /*Пользователь вводит с клавиатуры номер месяца (от 1 до 12). В
+        /*Задание 5 Пользователь вводит с клавиатуры номер месяца (от 1 до 12). В
         зависимости от полученного номера месяца программа выводит на
         экран надпись: Winter (если введено значение 1,2 или 12), Spring
         (если введено значение от 3 до 5), Summer (если введено значение
@@ -111,6 +111,33 @@ public class Main
         }*/
 
 
+        /*Задание 6 Пользователь вводит с клавиатуры количество метров.
+        В зависимости от выбора пользователя программа переводит метры
+        в мили, дюймы или ярды.*/
 
+        Scanner in1 = new Scanner(System.in);
+        System.out.print("Введите метры: ");
+        int metry = in1.nextInt();
+
+        System.out.println("1: Метр - миля;");
+        System.out.println("2: Метр - дюйм;");
+        System.out.println("3: Метр - ярд.");
+
+        Scanner in2 = new Scanner(System.in);
+        System.out.print("Введите число: ");
+        int option1 = in2.nextInt();
+
+        switch (option1)
+        {
+            case 1:
+                System.out.println("Метр - миля: " + 0.000621371 * metry);
+                break;
+            case 2:
+                System.out.println("Метр - дюйм: " + 39.3701 * metry);
+                break;
+            case 3:
+                System.out.println("Метр - ярд: " + 1.09361 * metry);
+                break;
+        }
     }
 }
