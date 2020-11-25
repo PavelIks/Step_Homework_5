@@ -115,18 +115,15 @@ public class Main
         В зависимости от выбора пользователя программа переводит метры
         в мили, дюймы или ярды.*/
 
-        Scanner in1 = new Scanner(System.in);
+        /*Scanner in1 = new Scanner(System.in);
         System.out.print("Введите метры: ");
         int metry = in1.nextInt();
-
         System.out.println("1: Метр - миля;");
         System.out.println("2: Метр - дюйм;");
         System.out.println("3: Метр - ярд.");
-
         Scanner in2 = new Scanner(System.in);
-        System.out.print("Введите число: ");
+        System.out.print("Введите команду: ");
         int option1 = in2.nextInt();
-
         switch (option1)
         {
             case 1:
@@ -137,6 +134,45 @@ public class Main
                 break;
             case 3:
                 System.out.println("Метр - ярд: " + 1.09361 * metry);
+                break;
+        }*/
+
+
+        /*Задание 7 Пользователь вводит с клавиатуры два числа. Нужно показать все нечетные числа в указанном диапазоне.
+        Если границы диапазона указаны неправильно требуется произвести нормализацию границ. Например, пользователь ввел
+        20 и 11, требуется нормализация, после которой начало диапазона станет равно 11, а конец 20.*/
+
+        Scanner in1 = new Scanner(System.in);
+        System.out.print("Введите 1 число: ");
+        int a = in1.nextInt();
+        Scanner in2 = new Scanner(System.in);
+        System.out.print("Введите 2 число: ");
+        int z = in2.nextInt();
+
+        System.out.println("1: чётное;");
+        System.out.println("2: нечётное.");
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введите команду: ");
+        int option1 = in.nextInt();
+        switch (option1)
+        {
+            case 1:
+                for (int i = a; i <= z; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        System.out.print(i + "; ");
+                    }
+                }
+                break;
+            case 2:
+                for (int i = a; i <= z; i++)
+                {
+                    if (i % 2 != 0)
+                    {
+                        System.out.print(i + "; ");
+                    }
+                }
                 break;
         }
     }
