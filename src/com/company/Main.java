@@ -142,7 +142,7 @@ public class Main
         Если границы диапазона указаны неправильно требуется произвести нормализацию границ. Например, пользователь ввел
         20 и 11, требуется нормализация, после которой начало диапазона станет равно 11, а конец 20.*/
 
-        Scanner in1 = new Scanner(System.in);
+        /*Scanner in1 = new Scanner(System.in);
         System.out.print("Введите 1 число: ");
         int a = in1.nextInt();
         Scanner in2 = new Scanner(System.in);
@@ -174,6 +174,23 @@ public class Main
                     }
                 }
                 break;
+        }*/
+
+
+        /*Задание 8 Показать на экран таблицу умножения в диапазоне, указанном пользователем. */
+
+        Scanner in1 = new Scanner(System.in);
+        System.out.print("Введите 1 число: ");
+        int a = in1.nextInt();
+        Scanner in2 = new Scanner(System.in);
+        System.out.print("Введите 2 число: ");
+        int z = in2.nextInt();
+        for (int i = a; i <= z; i++)
+        {
+            for (int i1 = 1; i1 <= 10; i1++)
+            {
+                System.out.print(i + " * " + i1 + " = " + i * i1 + "\n");
+            }
         }
     }
 }
