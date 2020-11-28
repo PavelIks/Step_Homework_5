@@ -330,6 +330,10 @@ public class Main
         Scanner in3 = new Scanner(System.in);
         System.out.print("Введите символ: ");
         var a3 = in3.next();
+        display(a1, a2, a3);
+    }
+    static void display(int a1, int a2, String a3)
+    {
         switch (a2)
         {
             case 1:
