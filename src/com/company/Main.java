@@ -1,5 +1,6 @@
 package com.company;
-
+// import java.util.Arrays;
+import java.util.Scanner;
 public class Main
 {
     /*Домашнее задание*/
@@ -198,7 +199,7 @@ public class Main
         элементы, посчитать количество отрицательных элементов, посчитать количество положительных элементов,
         посчитать количество нулей. Результаты вывести на экран. */
 
-        int mass[] = {1, 34, 326, -32, 235, -1, 0};
+        /*int mass[] = {1, 34, 326, -32, 235, -1, 0};
         int max = mass[0];
         int min = mass[0];
         int masslength = mass.length;
@@ -232,7 +233,44 @@ public class Main
         System.out.println("Мин. число: " + min);
         System.out.println("Отр. чисел: " + otr);
         System.out.println("Пол. чисел: " + pol);
-        System.out.println("Нулей: " + zer);
+        System.out.println("Нулей: " + zer);*/
 
+
+        /*Есть одномерный массив, заполненный случайными
+        числами. На основании данных этого массива нужно:
+        ■ Создать одномерный массив, содержащий только
+        четные числа из первого массива;
+        ■ Создать одномерный массив, содержащий только
+        нечетные числа из первого массива;
+        ■ Создать одномерный массив, содержащий только
+        отрицательные числа из первого массива;
+        ■ Создать одномерный массив, содержащий только
+        положительные числа из первого массива.*/
+
+        int mass1[] = {1, 34, 326, -32, 235, -1, 0};
+        int a = 0;
+        int masslength = mass1.length;
+        for (int i = 0; i < masslength; i++)
+        {
+            if ((mass1[i] % 2 == 0) & (mass1[i]) != 0)
+            {
+                a++;
+            }
+        }
+        int mass2[] = new int[a];
+        int b = 0;
+        for (int each : mass1)
+        {
+            if ((each % 2 == 0) & (each != 0))
+            {
+                mass2[b] = each;
+                b++;
+            }
+        }
+        for (int i = 0; i < a; i++)
+        {
+            System.out.println(mass2[i]);
+        }
+        //System.out.println(Arrays.toString(mass2));
     }
 }
