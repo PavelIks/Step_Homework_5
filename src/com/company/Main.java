@@ -321,7 +321,7 @@ public class Main
         /*Задание 11 Напишите метод, который отображает горизонтальную или вертикальную линию из
         некоторого символа. Метод принимает в качестве параметра: длину линии, направление, символ.*/
 
-        Scanner in1 = new Scanner(System.in);
+        /*Scanner in1 = new Scanner(System.in);
         System.out.print("Введите длину линии: ");
         int a1 = in1.nextInt();
         Scanner in2 = new Scanner(System.in);
@@ -330,9 +330,42 @@ public class Main
         Scanner in3 = new Scanner(System.in);
         System.out.print("Введите символ: ");
         var a3 = in3.next();
-        display(a1, a2, a3);
+        display1(a1, a2, a3);*/
+
+
+        /*Задание 12 Напишите метод, сортирующий массив по убыванию
+        или возрастанию в зависимости от выбора пользователя.*/
+
+        int masslength = 6;
+
+        int[] array = new int[masslength];
+        array[0] = 1;
+        array[1] = 500;
+        array[2] = 120;
+        array[3] = 2;
+        array[4] = 0;
+        array[5] = -50;
+
+        for (int startIndex = 0; startIndex < masslength - 1; ++startIndex)
+        {
+            int smallestIndex = startIndex;
+            for (int currentIndex = startIndex + 1; currentIndex < masslength; ++currentIndex)
+            {
+                if (array[currentIndex] < array[smallestIndex])
+                {
+                    smallestIndex = currentIndex;
+                }
+                int tmp = array[startIndex];
+                array[startIndex] = array[smallestIndex];
+                array[smallestIndex] = tmp;
+            }
+        }
+        for (int index = 0; index < masslength; ++index)
+        {
+            System.out.print(array[index] + "\n");
+        }
     }
-    static void display(int a1, int a2, String a3)
+    /*static void display1(int a1, int a2, String a3)
     {
         switch (a2)
         {
@@ -349,5 +382,5 @@ public class Main
                 }
                 break;
         }
-    }
+    }*/
 }
