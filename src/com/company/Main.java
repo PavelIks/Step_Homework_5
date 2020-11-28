@@ -1,5 +1,4 @@
 package com.company;
-// import java.util.Arrays;
 import java.util.Scanner;
 public class Main
 {
@@ -242,7 +241,7 @@ public class Main
         3) Создать одномерный массив, содержащий только отрицательные числа из первого массива;
         4) Создать одномерный массив, содержащий только положительные числа из первого массива.*/
 
-        int mass1[] = {1, 34, 326, -32, 235, -1, 0};
+        /*int mass1[] = {1, 34, 326, -32, 235, -1, 0};
         int a1 = 0;
         int a2 = 0;
         int a3 = 0;
@@ -302,24 +301,49 @@ public class Main
         {
             System.out.println(mass2[i]);
         }
-        //System.out.println(Arrays.toString(mass2));
         System.out.print("\n");
         for (int i = 0; i < a2; i++)
         {
             System.out.println(mass3[i]);
         }
-        //System.out.println(Arrays.toString(mass3));
         System.out.print("\n");
         for (int i = 0; i < a3; i++)
         {
             System.out.println(mass4[i]);
         }
-        //System.out.println(Arrays.toString(mass4));
         System.out.print("\n");
         for (int i = 0; i < a4; i++)
         {
             System.out.println(mass5[i]);
+        }*/
+
+
+        /*Задание 11 Напишите метод, который отображает горизонтальную или вертикальную линию из
+        некоторого символа. Метод принимает в качестве параметра: длину линии, направление, символ.*/
+
+        Scanner in1 = new Scanner(System.in);
+        System.out.print("Введите длину линии: ");
+        int a1 = in1.nextInt();
+        Scanner in2 = new Scanner(System.in);
+        System.out.print("Введите направление: ");
+        int a2 = in2.nextInt();
+        Scanner in3 = new Scanner(System.in);
+        System.out.print("Введите символ: ");
+        var a3 = in3.next();
+        switch (a2)
+        {
+            case 1:
+                for(int i = 0; i < a1; i++)
+                {
+                    System.out.println(a3);
+                }
+                break;
+            case 2:
+                for(int i = 0; i < a1; i++)
+                {
+                    System.out.print(a3 + " ");
+                }
+                break;
         }
-        //System.out.println(Arrays.toString(mass5));
     }
 }
