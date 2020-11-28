@@ -1,5 +1,5 @@
 package com.company;
-import  java.util.Scanner;
+
 public class Main
 {
     /*Домашнее задание*/
@@ -179,7 +179,7 @@ public class Main
 
         /*Задание 8 Показать на экран таблицу умножения в диапазоне, указанном пользователем. */
 
-        Scanner in1 = new Scanner(System.in);
+        /*Scanner in1 = new Scanner(System.in);
         System.out.print("Введите 1 число: ");
         int a = in1.nextInt();
         Scanner in2 = new Scanner(System.in);
@@ -191,6 +191,48 @@ public class Main
             {
                 System.out.print(i + " * " + i1 + " = " + i * i1 + "\n");
             }
+        }*/
+
+
+        /*Задание 9 В одномерном массиве, заполненном случайными числами, определить минимальный и максимальный
+        элементы, посчитать количество отрицательных элементов, посчитать количество положительных элементов,
+        посчитать количество нулей. Результаты вывести на экран. */
+
+        int mass[] = {1, 34, 326, -32, 235, -1, 0};
+        int max = mass[0];
+        int min = mass[0];
+        int masslength = mass.length;
+        int otr = 0;
+        int pol = 0;
+        int zer = 0;
+        for (int i1 = 0; i1 < masslength; i1++)
+        {
+            if (mass[i1] > max)
+            {
+                max = mass[i1];
+            }
+            if (mass[i1] < min)
+            {
+                min = mass[i1];
+            }
+            if(mass[i1] < 0)
+            {
+                otr++;
+            }
+            if (mass[i1] > 0)
+            {
+                pol++;
+            }
+            if (mass[i1] == 0)
+            {
+                zer++;
+            }
         }
+        System.out.println("Макс. число: " + max);
+        System.out.println("Мин. число: " + min);
+        System.out.println("Отр. чисел: " + otr);
+        System.out.println("Пол. чисел: " + pol);
+        System.out.println("Нулей: " + zer);
+
     }
 }
