@@ -236,41 +236,90 @@ public class Main
         System.out.println("Нулей: " + zer);*/
 
 
-        /*Есть одномерный массив, заполненный случайными
-        числами. На основании данных этого массива нужно:
-        ■ Создать одномерный массив, содержащий только
-        четные числа из первого массива;
-        ■ Создать одномерный массив, содержащий только
-        нечетные числа из первого массива;
-        ■ Создать одномерный массив, содержащий только
-        отрицательные числа из первого массива;
-        ■ Создать одномерный массив, содержащий только
-        положительные числа из первого массива.*/
+        /*Есть одномерный массив, заполненный случайными числами. На основании данных этого массива нужно:
+        1) Создать одномерный массив, содержащий только четные числа из первого массива;
+        2) Создать одномерный массив, содержащий только нечетные числа из первого массива;
+        3) Создать одномерный массив, содержащий только отрицательные числа из первого массива;
+        4) Создать одномерный массив, содержащий только положительные числа из первого массива.*/
 
         int mass1[] = {1, 34, 326, -32, 235, -1, 0};
-        int a = 0;
+        int a1 = 0;
+        int a2 = 0;
+        int a3 = 0;
+        int a4 = 0;
         int masslength = mass1.length;
         for (int i = 0; i < masslength; i++)
         {
             if ((mass1[i] % 2 == 0) & (mass1[i]) != 0)
             {
-                a++;
+                a1++;
+            }
+            if ((mass1[i] % 2 != 0) & (mass1[i]) != 0)
+            {
+                a2++;
+            }
+            if ((mass1[i] < 0) & (mass1[i]) != 0)
+            {
+                a3++;
+            }
+            if ((mass1[i] > 0) & (mass1[i]) != 0)
+            {
+                a4++;
             }
         }
-        int mass2[] = new int[a];
-        int b = 0;
+        int mass2[] = new int[a1];
+        int b1 = 0;
+        int mass3[] = new int[a2];
+        int b2 = 0;
+        int mass4[] = new int[a3];
+        int b3 = 0;
+        int mass5[] = new int[a4];
+        int b4 = 0;
         for (int each : mass1)
         {
             if ((each % 2 == 0) & (each != 0))
             {
-                mass2[b] = each;
-                b++;
+                mass2[b1] = each;
+                b1++;
+            }
+            if ((each % 2 != 0) & (each != 0))
+            {
+                mass3[b2] = each;
+                b2++;
+            }
+            if ((each < 0) & (each != 0))
+            {
+                mass4[b3] = each;
+                b3++;
+            }
+            if ((each > 0) & (each != 0))
+            {
+                mass5[b4] = each;
+                b4++;
             }
         }
-        for (int i = 0; i < a; i++)
+        for (int i = 0; i < a1; i++)
         {
             System.out.println(mass2[i]);
         }
         //System.out.println(Arrays.toString(mass2));
+        System.out.print("\n");
+        for (int i = 0; i < a2; i++)
+        {
+            System.out.println(mass3[i]);
+        }
+        //System.out.println(Arrays.toString(mass3));
+        System.out.print("\n");
+        for (int i = 0; i < a3; i++)
+        {
+            System.out.println(mass4[i]);
+        }
+        //System.out.println(Arrays.toString(mass4));
+        System.out.print("\n");
+        for (int i = 0; i < a4; i++)
+        {
+            System.out.println(mass5[i]);
+        }
+        //System.out.println(Arrays.toString(mass5));
     }
 }
