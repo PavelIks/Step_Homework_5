@@ -147,7 +147,12 @@ public class Main {
         Scanner in2 = new Scanner(System.in);
         System.out.print("Введите 2 число: ");
         int z = in2.nextInt();
-
+        if(a > z)
+        {
+            int tmp = a;
+            a = z;
+            z = tmp;
+        }
         System.out.println("1: чётное;");
         System.out.println("2: нечётное.");
         Scanner in = new Scanner(System.in);
