@@ -1,7 +1,6 @@
 package com.company;
 import java.util.Scanner;
-public class Main
-{
+public class Main {
     /*Домашнее задание*/
     public static void main(String[] args)
     {
@@ -336,34 +335,10 @@ public class Main
         /*Задание 12 Напишите метод, сортирующий массив по убыванию
         или возрастанию в зависимости от выбора пользователя.*/
 
-        int masslength = 6;
-
-        int[] array = new int[masslength];
-        array[0] = 1;
-        array[1] = 500;
-        array[2] = 120;
-        array[3] = 2;
-        array[4] = 0;
-        array[5] = -50;
-
-        for (int startIndex = 0; startIndex < masslength - 1; ++startIndex)
-        {
-            int smallestIndex = startIndex;
-            for (int currentIndex = startIndex + 1; currentIndex < masslength; ++currentIndex)
-            {
-                if (array[currentIndex] < array[smallestIndex])
-                {
-                    smallestIndex = currentIndex;
-                }
-                int tmp = array[startIndex];
-                array[startIndex] = array[smallestIndex];
-                array[smallestIndex] = tmp;
-            }
-        }
-        for (int index = 0; index < masslength; ++index)
-        {
-            System.out.print(array[index] + "\n");
-        }
+        /*Scanner in1 = new Scanner(System.in);
+        System.out.print("Введите символ: ");
+        int a1 = in1.nextInt();
+        display2(a1);*/
     }
     /*static void display1(int a1, int a2, String a3)
     {
@@ -379,6 +354,57 @@ public class Main
                 for(int i = 0; i < a1; i++)
                 {
                     System.out.print(a3 + " ");
+                }
+                break;
+        }
+    }*/
+    /*static void display2(int a1)
+    {
+        int masslength = 6;
+
+        int[] array = new int[masslength];
+        array[0] = 1;
+        array[1] = 500;
+        array[2] = 120;
+        array[3] = 2;
+        array[4] = 0;
+        array[5] = -50;
+        switch (a1)
+        {
+            case 1:
+                for (int i = 0; i < array.length - 1; i++)
+                {
+                    for (int j = array.length - 1; j > i; j--)
+                    {
+                        if (array[j - 1] > array[j])
+                        {
+                            int tmp = array[j - 1];
+                            array[j - 1] = array[j];
+                            array[j] = tmp;
+                        }
+                    }
+                }
+                for (int index = 0; index < masslength; ++index)
+                {
+                    System.out.print(array[index] + "\n");
+                }
+                break;
+            case 2:
+                for (int i = 0; i < array.length - 1; i++)
+                {
+                    for (int j = array.length - 1; j > i; j--)
+                    {
+                        if (array[j - 1] < array[j])
+                        {
+                            int tmp = array[j - 1];
+                            array[j - 1] = array[j];
+                            array[j] = tmp;
+                        }
+                    }
+                }
+                for (int index = 0; index < masslength; ++index)
+                {
+                    System.out.print(array[index] + "\n");
                 }
                 break;
         }
