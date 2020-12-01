@@ -1,6 +1,7 @@
 package com.company;
 import java.util.Scanner;
-public class Main {
+public class Main
+{
     /*Домашнее задание*/
     public static void main(String[] args)
     {
@@ -106,7 +107,7 @@ public class Main {
         }
         else
         {
-            System.out.print("Число не может быть больше 12-и!");
+            System.out.print("Диапазон числа может быть с 1 до 12-и!");
         }*/
 
 
